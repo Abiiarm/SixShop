@@ -46,7 +46,7 @@ function App() {
           <p className="text-center text-sm text-slate-200">
             Copyright <span className="text-center text-sm text-slate-200">@</span> by{" "}
             <a href="https://github.com/Abiiarm" className="text-lime-500 transition duration-100 ease-in-out hover:text-lime-600" target="_blank" rel="noopener noreferrer" title="SixShop">
-              Abiboy
+              Kelompok 6
             </a>
           </p>
         </div>
