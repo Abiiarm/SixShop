@@ -38,8 +38,8 @@ function WishlistModal({ onClose, onOpenCart }) {
             {totalWIshlist === 0 ? (
               <div className="flex h-full w-full flex-col items-center justify-center pb-5">
                 <img src={wishlistImg} alt="Wishlist Blue Box Empty" className="block w-28" />
-                <p className="mt-3 text-center text-sm font-semibold">"Wishlist Anda kosong 👌"</p>
-                <p className="text-center text-sm text-gray-400">Tekan ikon hati di item yang Anda sukai untuk menyimpannya sebagai favorit Anda ✨.</p>
+                <p className="mt-3 text-center text-sm font-semibold">Your wishlist is empty 👌</p>
+                <p className="text-center text-sm text-gray-400">Tap the heart on any item to start saving your favorites ✨.</p>
                 <button
                   type="button"
                   aria-label="Continue Shopping"
