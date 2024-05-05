@@ -2,6 +2,6 @@
 
 Pengumpulan Tugas Desain Web | Pendidikan Teknik Elektronika 2021
 nama: SixShop
-link website: https://SixShop.vercel.app/
-link repository: https://github.com/Abiiarm
+link website: https://six-shop-mu.vercel.app/
+link repository: https://github.com/Abiiarm/SixShop
 design website: modif sendiri

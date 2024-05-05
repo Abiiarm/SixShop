@@ -21,9 +21,9 @@ function Header({ onOpenCart, onOpenWishlist }) {
             <figure className="mr-2 block">
               <img src="https://vitejs.dev/logo.svg" alt="Vite Logo" className="h-7 mobile:h-8" />
             </figure>
-            <span className="hidden text-xl font-bold text-gray-100 mobile:block">BoyShop</span>
+            <span className="hidden text-xl font-bold text-gray-100 mobile:block">SixShop</span>
           </a>
-          <h5 className="text-lg font-bold text-gray-100 mobile:hidden">BoyShop</h5>
+          <h5 className="text-lg font-bold text-gray-100 mobile:hidden">SixShop</h5>
           <div className="flex items-center space-x-4.5 mobile:space-x-6">
             <button className="relative" type="button" title="wishlist" onClick={handleToggleWishlist}>
               <BookHeartIcon strokeWidth={2.5} className="w-5 stroke-gray-100" />
