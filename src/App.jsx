@@ -48,6 +48,11 @@ function App() {
             <a href="https://github.com/Abiiarm" className="text-lime-500 transition duration-100 ease-in-out hover:text-lime-600" target="_blank" rel="noopener noreferrer" title="SixShop">
               Kelompok 6
             </a>
+            <div className="mb-2 mt-2">
+              <a href="https://forms.gle/E1EtaSxY5Nfg7CYh6" target="_blank" rel="noopener noreferrer">
+                <button className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">Nilai Kami</button>
+              </a>
+            </div>
           </p>
         </div>
       </footer>
