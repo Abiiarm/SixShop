@@ -58,5 +58,14 @@ function App() {
     </div>
   );
 }
+const handleOpenFeedbackForm = () => {
+  window.open("https://forms.gle/E1EtaSxY5Nfg7CYh6", "_blank");
+};
+
+return (
+  <button onClick={handleOpenFeedbackForm} className="mt-4 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
+    Buka Formulir Feedback
+  </button>
+);
 
 export default App;
