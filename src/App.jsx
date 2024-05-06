@@ -48,9 +48,6 @@ function App() {
             <a href="https://github.com/Abiiarm" className="text-lime-500 transition duration-100 ease-in-out hover:text-lime-600" target="_blank" rel="noopener noreferrer" title="SixShop">
               Kelompok 6
             </a>
-            <a href="https://forms.gle/E1EtaSxY5Nfg7CYh6" target="_blank" rel="noopener noreferrer">
-              <button className="mt-2 rounded-lg bg-blue-500 px-4 py-2 text-center text-sm font-bold text-white transition duration-100 ease-in-out hover:bg-blue-600">Buka Formulir Google</button>
-            </a>
           </p>
         </div>
       </footer>
@@ -61,5 +58,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
