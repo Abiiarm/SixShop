@@ -15,6 +15,7 @@ function App() {
     wishlist: false,
   });
   const [dateTimeCheckout, setDateTimeCheckout] = useState(null);
+  const [showMainPage, setShowMainPage] = useState(false);
 
   const toggleModal = (modal) => {
     setModalStates((prevStates) => ({
@@ -35,32 +36,48 @@ function App() {
   document.querySelector("body").classList.toggle("overflow-hidden", isAnyModalOpen);
 
   return (
-    <div className={isAnyModalOpen ? "overflow-hidden" : ""}>
-      <Header onOpenCart={() => toggleModal("cart")} onOpenWishlist={() => toggleModal("wishlist")} />
-      <main className="container mx-auto mt-24 min-h-[calc(100vh-189px)] max-w-7xl px-5 sm:px-6">
-        <div className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 p-6 text-center shadow-xl">
-          <p className="text-xl font-semibold text-white">
-            Nikmati pengalaman belanja tak tertandingi di SixShop – pusat fashion trendy, elektronik, dan banyak lagi. Temukan produk berkualitas, navigasi mudah, dan transaksi aman. Tetap stylish dan cerdas. Belanja di SixShop.
-          </p>
-        </div>
-        <h1 className="mb-10 hidden pt-6 text-center text-2xl font-bold mobile:block">Shop Now</h1>
-        <ProductList onOpen={() => toggleModal("product")} onClose={() => toggleModal("product")} onOpenFilter={() => toggleModal("filter")} />
-      </main>
-      <footer className="mt-10 bg-gray-900">
-        <div className="container mx-auto max-w-7xl px-5 py-4 sm:px-6">
-          <p className="text-center text-sm text-slate-200">
-            Copyright <span className="text-center text-sm text-slate-200">@</span> by{" "}
-            <a href="https://github.com/Abiiarm" className="text-lime-500 transition duration-100 ease-in-out hover:text-lime-600" target="_blank" rel="noopener noreferrer" title="SixShop">
-              Kelompok 6
-            </a>
-            <div className="mb-2 mt-2">
+    <div className={`flex min-h-screen flex-col ${isAnyModalOpen ? "overflow-hidden" : ""}`}>
+      {showMainPage && <Header onOpenCart={() => toggleModal("cart")} onOpenWishlist={() => toggleModal("wishlist")} />}
+      <div className="flex-grow">
+        {!showMainPage && (
+          <div className="flex h-screen w-full items-center justify-center bg-gray-800">
+            <div className="w-full px-4 text-center text-white">
+              <h1 className="mb-5 animate-pulse text-4xl font-bold" style={{ color: "white" }}>
+                <img src="https://vitejs.dev/logo.svg" alt="Logo SixShop" style={{ width: "150px", margin: "0 auto" }} />
+                Selamat Datang di SixShop
+              </h1>
+              <p className="mb-5 text-xl" style={{ color: "white" }}>
+                Nikmati pengalaman belanja yang tak tertandingi di pusat fashion trendy, elektronik, dan banyak lagi.
+              </p>
+              <button className="rounded-lg bg-white px-6 py-3 font-bold text-gray-800 shadow-lg transition duration-500 ease-in-out hover:scale-105 hover:bg-gray-200" onClick={() => setShowMainPage(true)}>
+                Mulai Belanja
+              </button>
+            </div>
+          </div>
+        )}
+        {showMainPage && (
+          <main className="container mx-auto mt-24 min-h-[calc(100vh-189px)] max-w-7xl px-5 sm:px-6">
+            <ProductList onOpen={() => toggleModal("product")} onClose={() => toggleModal("product")} onOpenFilter={() => toggleModal("filter")} />
+          </main>
+        )}
+      </div>
+      {showMainPage && (
+        <footer className="bg-gray-800">
+          <div className="container mx-auto max-w-7xl px-5 py-4 sm:px-6">
+            <p className="text-center text-sm text-slate-200">
+              Hak Cipta <span className="text-center text-sm text-slate-200">@</span> oleh{" "}
+              <a href="https://github.com/Abiiarm" className="text-lime-500 transition duration-100 ease-in-out hover:text-lime-600" target="_blank" rel="noopener noreferrer" title="SixShop">
+                Kelompok 6
+              </a>
+            </p>
+            <div className="mb-2 mt-2 text-center">
               <a href="https://forms.gle/E1EtaSxY5Nfg7CYh6" target="_blank" rel="noopener noreferrer">
                 <button className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">Nilai Kami</button>
               </a>
             </div>
-          </p>
-        </div>
-      </footer>
+          </div>
+        </footer>
+      )}
       {modalStates.cart && <CartModal onClose={() => toggleModal("cart")} onCheckout={handleOpenCheckout} />}
       {modalStates.checkout && <Checkout closeCheckout={handleCloseCheckout} datetime={dateTimeCheckout} />}
       {modalStates.filter && <Filter onClose={() => toggleModal("filter")} />}
