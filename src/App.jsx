@@ -38,6 +38,11 @@ function App() {
     <div className={isAnyModalOpen ? "overflow-hidden" : ""}>
       <Header onOpenCart={() => toggleModal("cart")} onOpenWishlist={() => toggleModal("wishlist")} />
       <main className="container mx-auto mt-24 min-h-[calc(100vh-189px)] max-w-7xl px-5 sm:px-6">
+        <div className="rounded-lg bg-gray-100 p-4 text-center shadow">
+          <p className="text-lg text-gray-800">
+            Nikmati pengalaman belanja tak tertandingi di SixShop – pusat fashion trendy, elektronik, dan banyak lagi. Temukan produk berkualitas, navigasi mudah, dan transaksi aman. Tetap stylish dan cerdas. Belanja di SixShop.
+          </p>
+        </div>
         <h1 className="mb-10 hidden pt-6 text-center text-2xl font-bold mobile:block">Shop Now</h1>
         <ProductList onOpen={() => toggleModal("product")} onClose={() => toggleModal("product")} onOpenFilter={() => toggleModal("filter")} />
       </main>
