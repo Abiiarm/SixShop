@@ -38,8 +38,8 @@ function App() {
     <div className={isAnyModalOpen ? "overflow-hidden" : ""}>
       <Header onOpenCart={() => toggleModal("cart")} onOpenWishlist={() => toggleModal("wishlist")} />
       <main className="container mx-auto mt-24 min-h-[calc(100vh-189px)] max-w-7xl px-5 sm:px-6">
-        <div className="rounded-lg bg-gray-100 p-4 text-center shadow">
-          <p className="text-lg text-gray-800">
+        <div className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 p-6 text-center shadow-xl">
+          <p className="text-xl font-semibold text-white">
             Nikmati pengalaman belanja tak tertandingi di SixShop – pusat fashion trendy, elektronik, dan banyak lagi. Temukan produk berkualitas, navigasi mudah, dan transaksi aman. Tetap stylish dan cerdas. Belanja di SixShop.
           </p>
         </div>
